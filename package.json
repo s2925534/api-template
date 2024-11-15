@@ -10,8 +10,21 @@
     "watch": "tsc --watch"
   },
   "keywords": [
-    "data",
-    "API"
+    "API",
+    "TypeScript",
+    "Express",
+    "Sequelize",
+    "Node.js",
+    "REST",
+    "MySQL",
+    "Backend",
+    "Database",
+    "Template",
+    "ORM",
+    "Web API",
+    "Server",
+    "CRUD",
+    "Scalable"
   ],
   "author": "veloso <pedro@veloso.dev>",
   "license": "MIT",
