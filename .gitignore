@@ -1,0 +1,6 @@
+.env
+.idea
+_files/*.json
+node_modules
+.DS_Store
+dist
