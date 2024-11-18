@@ -9,7 +9,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const streamPipeline = promisify(pipeline);
-const filesDir = process.env.FILES_DIR || path.resolve(__dirname, '_files'); // Default fallback
+const filesDir = process.env.FILES_DIR || path.resolve(__dirname, 'src', '_files');
 
 export async function getSample(req: Request, res: Response): Promise<Response> {
     try {
@@ -71,8 +71,9 @@ export async function parseFile(req: Request, res: Response) {
             text += await fetchContentFromUrl(url);
         }
 
-        const interfaceContent = fs.readFileSync('./interfacePrompt.interface.ts', 'utf8');
-        const interQuestionsContent = fs.readFileSync('./interQuestions.txt', 'utf8');
+        const interfaceContent = fs.readFileSync(path.resolve(__dirname, '..', '..', 'src', 'interfaces', 'interfacePrompt.interface.ts'), 'utf8');
+        const interQuestionsContent = fs.readFileSync(path.resolve(__dirname, '..', '..', 'src', '_files', 'interQuestions.txt'), 'utf8');
+
         const instructions = `
 Given this
 ${text}
