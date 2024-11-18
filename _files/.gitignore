@@ -3,3 +3,6 @@
 
 # Except for this .gitignore file
 !.gitignore
+
+# Ignore interQuestions.txt
+interQuestions.txt
